@@ -1,0 +1,17 @@
+.container{
+    min-height: 100vh;
+    padding: 2%;
+    margin-top: 7%;
+}
+.heading{
+    font-size: 35px;
+    margin-bottom: 1%;
+    opacity: 0.5;
+    font-weight: 700;
+    color: #BEADFA;
+}
+.paragraph{
+    font-size: 42px;
+    font-weight: 500;
+    color: #C3ACD0;
+}
