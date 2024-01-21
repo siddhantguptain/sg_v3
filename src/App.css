@@ -6,6 +6,7 @@
 }
 .MAINContainer{
     flex: 8;
+    margin: 2%;
 }
 .RIGTHContainer{
     flex: 0.5;
