@@ -1,0 +1,21 @@
+.container{
+  justify-content: space-between;
+}
+.subText{
+    font-size: 28px;
+    font-weight: 500;
+}
+.name{
+    color: #9c3cf2;
+    font-size: 70px;
+    font-weight: 700;
+}
+.text{
+    font-size: 63px;
+    font-weight: 600;
+}
+.para{
+    font-size: 35px;
+    font-weight: 600;
+}
+
