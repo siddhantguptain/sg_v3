@@ -1,10 +1,17 @@
-import React from 'react';
+import React , {useState} from 'react';
 import style from "./Certificates.module.css";
 
 import MERN from "../../Assets/MERN.png";
 import REACTJS from "../../Assets/REACTJS.png";
 import JS from "../../Assets/JS.png";
 import WEBDEV from "../../Assets/WEBDEV.png";
+
+// const TempData = [
+//     "a",
+//     "b",
+//     "c"
+// ]
+
 
 const CertificatesDATA =[
     {
@@ -25,14 +32,41 @@ const CertificatesDATA =[
     },
 ] ;
 
+function CertificatesItems ({index, src , title , updateActiveCertificate, }){
+    return (<div className={style.items}>
+            <div className={style.info}>
+                 <h1 className={style.title}>{title}</h1>
+            </div>
+            <div className={style.certificate}>
+                 <img src={src} alt={title} />
+            </div>
+    </div>);
+}
+
 const CERTIFICATES  = () =>{
+    const [activeCertificate, setActiveCertificate] = useState(1);
     return(
         <div className={style.container}>
             <div className={style.heading}>
                 Certificates
             </div>
             <div className={style.displayContainer}>
-                    <img src={JS} />
+                <div className={style.displayContainerCounter}>
+                    <span>{activeCertificate}</span>
+                    <span className={style.divider} />
+                    <span>{CertificatesDATA.length}</span>
+                </div>
+
+                {CertificatesDATA.map((cer , index) => (
+                    <CertificatesItems
+                        key={cer.src}
+                        index={index}
+                        {...cer}  
+                        updateActiveCertificate={(index) => setActiveCertificate(index + 1)}                  
+                    /> 
+
+                ))}
+
             </div>
         </div>
     );
