@@ -33,12 +33,18 @@ const CertificatesDATA =[
 ] ;
 
 function CertificatesItems ({index, src , title , updateActiveCertificate, }){
-    return (<div className={style.items}>
+
+    return (<div className={style.wrapper}>
+        <div />
+            <div className={style.items}>
+
             <div className={style.info}>
                  <h1 className={style.title}>{title}</h1>
             </div>
             <div className={style.certificate}>
-                 <img src={src} alt={title} />
+                 <img  className={style.certificateIMG} src={src} alt={title} />
+                 <div/>
+            </div>
             </div>
     </div>);
 }
@@ -51,7 +57,8 @@ const CERTIFICATES  = () =>{
                 Certificates
             </div>
             <div className={style.displayContainer}>
-                <div className={style.displayContainerCounter}>
+                <div className={style.slideContainer}>
+                <div className={style.counters}>
                     <span>{activeCertificate}</span>
                     <span className={style.divider} />
                     <span>{CertificatesDATA.length}</span>
@@ -64,9 +71,8 @@ const CERTIFICATES  = () =>{
                         {...cer}  
                         updateActiveCertificate={(index) => setActiveCertificate(index + 1)}                  
                     /> 
-
                 ))}
-
+            </div>
             </div>
         </div>
     );
