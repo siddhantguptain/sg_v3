@@ -16,15 +16,15 @@ import WEBDEV from "../../Assets/WEBDEV.png";
 const CertificatesDATA =[
     {
         src:MERN,
-        title:"The MERN FullStack Guide",
+        title:"MERNStack",
     },
     {
         src:REACTJS,
-        title:"React - The Complete Guide",
+        title:"React JS",
     },
     {
         src:JS,
-        title:"JavaScript - Zero to Expert!",
+        title:"JavaScript",
     },
     {
         src:WEBDEV,
@@ -35,7 +35,6 @@ const CertificatesDATA =[
 function CertificatesItems ({index, src , title , updateActiveCertificate, }){
 
     return (<div className={style.wrapper}>
-        <div />
             <div className={style.items}>
 
             <div className={style.info}>
@@ -43,7 +42,6 @@ function CertificatesItems ({index, src , title , updateActiveCertificate, }){
             </div>
             <div className={style.certificate}>
                  <img  className={style.certificateIMG} src={src} alt={title} />
-                 <div/>
             </div>
             </div>
     </div>);
