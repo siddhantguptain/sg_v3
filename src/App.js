@@ -6,10 +6,12 @@ import PANEL_RIGHT from './components/SidePANELS/Panel_RIGHT/Panel_RIGHT.js';
 import HOME from './components/Home/Home.js';
 import ABOUT_ME from './components/AboutME/AboutME.js';
 import CERTIFICATES from './components/Certificates/Certificates.js';
+import FOOTER from './components/Footer/Footer.js';
 
 
 function App() {
   return (
+    <>
     <div className="AppContainer">
         <div className="LEFTContainer">
             <PANEL_LEFT />
@@ -19,10 +21,12 @@ function App() {
             <ABOUT_ME />
             <CERTIFICATES />
         </div>
-        <div className="RIGHTContainer">
+        {/* <div className="RIGHTContainer">
             <PANEL_RIGHT/>
-        </div>
+        </div> */}
     </div>
+    <FOOTER />
+    </>
   );
 }
 
