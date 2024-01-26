@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import './App.css';
 
 import PANEL_LEFT from './components/SidePANELS/Panel_LEFT/Panel_LEFT.js';
@@ -9,9 +10,16 @@ import CERTIFICATES from './components/Certificates/Certificates.js';
 import FOOTER from './components/Footer/Footer.js';
 
 
+
 function App() {
+  const [preloader , setPreloader] = useState(true);
   return (
     <>
+    {preloader ?(
+      <div className="LoaderContainer">
+        <h1>Namaste</h1>
+      </div>
+    ) :(
     <div className="AppContainer">
         <div className="LEFTContainer">
             <PANEL_LEFT />
@@ -20,12 +28,15 @@ function App() {
             <HOME />
             <ABOUT_ME />
             <CERTIFICATES />
+            <FOOTER />
         </div>
         {/* <div className="RIGHTContainer">
             <PANEL_RIGHT/>
         </div> */}
     </div>
-    <FOOTER />
+   
+    )
+      }
     </>
   );
 }
